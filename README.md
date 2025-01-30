@@ -97,5 +97,29 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-# shortened-url-microservice
-# shortened-url-microservice
+
+
+
+
+# shortened URL Microservice.
+
+This is a NestJS Microservice so you can run in dev mode but it include a docker configuration to run in production mode. Usually it will use the port 3000.
+
+## Run directly in dev mode.
+```bash
+npm install
+
+npm run start:dev
+```
+
+## Run production mode.
+Make sure that you don't have node_modules, package-lock.json and dist before package the Docker container.
+```bash
+docker-compose up -d
+
+```
+
+It will expose se service usually on localhost:3000
+
+### CORS Policy configuration.
+Make it sure that you added the right port on the main.ts cors configuration and middleware, to make sure that it is pointing on the right frontend address
